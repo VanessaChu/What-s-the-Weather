@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Whats_the_Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,74 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="C8R-M7-SW3">
+                                <rect key="frame" x="-73" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's the Weather?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjr-Ps-Fhr">
+                                <rect key="frame" x="44.5" y="80" width="286" height="51"/>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your city:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1v3-PI-xQP">
+                                <rect key="frame" x="131.5" y="161" width="112" height="28"/>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8sr-00-AkZ">
+                                <rect key="frame" x="41" y="210" width="289" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bW6-Ev-wrx">
+                                <rect key="frame" x="163" y="254" width="49" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="getWeather:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gHM-Ns-RdO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUG-As-e0o">
+                                <rect key="frame" x="41" y="323" width="289" height="76"/>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1v3-PI-xQP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0B1-sH-x9T"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="C8R-M7-SW3" secondAttribute="bottom" id="8Bd-sf-Isi"/>
+                            <constraint firstItem="TUG-As-e0o" firstAttribute="top" secondItem="bW6-Ev-wrx" secondAttribute="bottom" constant="39" id="Amx-el-KdA"/>
+                            <constraint firstItem="8sr-00-AkZ" firstAttribute="top" secondItem="1v3-PI-xQP" secondAttribute="bottom" constant="21" id="EuJ-et-NUg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8sr-00-AkZ" secondAttribute="trailing" constant="29" id="Iz9-3K-i8W"/>
+                            <constraint firstItem="8sr-00-AkZ" firstAttribute="top" secondItem="1v3-PI-xQP" secondAttribute="bottom" constant="21" id="Q7e-iW-K5T"/>
+                            <constraint firstItem="C8R-M7-SW3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RxI-DW-eP8"/>
+                            <constraint firstItem="bW6-Ev-wrx" firstAttribute="top" secondItem="8sr-00-AkZ" secondAttribute="bottom" constant="14" id="XF2-Y7-hAZ"/>
+                            <constraint firstItem="bjr-Ps-Fhr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aXM-of-z3f"/>
+                            <constraint firstItem="bW6-Ev-wrx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fO4-Bb-mDa"/>
+                            <constraint firstItem="C8R-M7-SW3" firstAttribute="top" secondItem="bjr-Ps-Fhr" secondAttribute="bottom" constant="-131" id="g63-tk-to2"/>
+                            <constraint firstAttribute="trailing" secondItem="C8R-M7-SW3" secondAttribute="trailing" constant="73" id="i0S-c9-keO"/>
+                            <constraint firstItem="TUG-As-e0o" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="k1r-Y0-RjZ"/>
+                            <constraint firstItem="1v3-PI-xQP" firstAttribute="top" secondItem="bjr-Ps-Fhr" secondAttribute="bottom" constant="30" id="km8-Bu-OLU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TUG-As-e0o" secondAttribute="trailing" constant="29" id="oje-zm-HQB"/>
+                            <constraint firstItem="8sr-00-AkZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="vLg-rg-Rpa"/>
+                            <constraint firstItem="C8R-M7-SW3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-73" id="xGD-BD-JMf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityField" destination="8sr-00-AkZ" id="rwj-Co-z7z"/>
+                        <outlet property="weatherMsg" destination="TUG-As-e0o" id="gka-Jr-aoH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="weather.jpg" width="6317" height="4211"/>
+    </resources>
 </document>

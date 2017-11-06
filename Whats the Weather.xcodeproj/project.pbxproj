@@ -12,6 +12,7 @@
 		B309D7BB1F031F83004D2389 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B309D7B91F031F83004D2389 /* Main.storyboard */; };
 		B309D7BD1F031F83004D2389 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B309D7BC1F031F83004D2389 /* Assets.xcassets */; };
 		B309D7C01F031F83004D2389 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B309D7BE1F031F83004D2389 /* LaunchScreen.storyboard */; };
+		B309D7C81F0320DE004D2389 /* weather.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B309D7C71F0320DE004D2389 /* weather.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		B309D7BC1F031F83004D2389 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B309D7BF1F031F83004D2389 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B309D7C11F031F83004D2389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B309D7C71F0320DE004D2389 /* weather.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = weather.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				B309D7B51F031F83004D2389 /* AppDelegate.swift */,
 				B309D7B71F031F83004D2389 /* ViewController.swift */,
 				B309D7B91F031F83004D2389 /* Main.storyboard */,
+				B309D7C71F0320DE004D2389 /* weather.jpg */,
 				B309D7BC1F031F83004D2389 /* Assets.xcassets */,
 				B309D7BE1F031F83004D2389 /* LaunchScreen.storyboard */,
 				B309D7C11F031F83004D2389 /* Info.plist */,
@@ -96,6 +99,7 @@
 				TargetAttributes = {
 					B309D7B11F031F83004D2389 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = M32N7UJQSV;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -125,6 +129,7 @@
 			files = (
 				B309D7C01F031F83004D2389 /* LaunchScreen.storyboard in Resources */,
 				B309D7BD1F031F83004D2389 /* Assets.xcassets in Resources */,
+				B309D7C81F0320DE004D2389 /* weather.jpg in Resources */,
 				B309D7BB1F031F83004D2389 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +265,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = M32N7UJQSV;
 				INFOPLIST_FILE = "Whats the Weather/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vanessachu.Whats-the-Weather";
@@ -272,6 +278,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = M32N7UJQSV;
 				INFOPLIST_FILE = "Whats the Weather/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vanessachu.Whats-the-Weather";
